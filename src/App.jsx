@@ -58,7 +58,7 @@ function App() {
     <div className="main" style={mainStyle}>
       <div className="app">
         <div className="navbar">
-          <div className="name" style={nameStyle}>Kalvium</div>
+          <div className="name" style={nameStyle}>Quiz App</div>
           <div className="toggle" onClick={handleToggle} style={toggleStyle}>Toggle</div>
         </div>
         <div className="container" style={containerStyle}>
