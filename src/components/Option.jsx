@@ -1,7 +1,7 @@
-function Option(props) {
+function Option({option,value,onSmash,btnStyle}) {
   return (
-    <div className="option" iscorrect={props.value.toString()} onClick={(e) => props.onSmash(e)} style={props.btnStyle}>
-        {props.option}
+    <div className="option" iscorrect={value.toString()} onClick={(e) => onSmash(e)} style={btnStyle}>
+        {option}
     </div>
   )
 }

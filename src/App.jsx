@@ -62,7 +62,25 @@ function App() {
           <div className="toggle" onClick={handleToggle} style={toggleStyle}>Toggle</div>
         </div>
         <div className="container" style={containerStyle}>
-          {count<5?<Question question={data[count].text} option={data[count].options} num={count+1} key={count} onSmash={optionHandle} btnStyle={btnStyle} numStyle={textStyle}/>:<Result score={score} textStyle={textStyle} btnStyle={btnStyle} onSmash={resetQuestion}/>}
+          {count<5?
+          (
+          <Question 
+            question={data[count].text} 
+            option={data[count].options} 
+            num={count+1} 
+            key={count} 
+            onSmash={optionHandle} 
+            btnStyle={btnStyle} 
+            numStyle={textStyle}/>
+          )
+          :
+          (
+          <Result 
+          score={score} 
+          textStyle={textStyle} 
+          btnStyle={btnStyle} 
+          onSmash={resetQuestion}/>
+          )}
         </div>
       </div>
     </div>

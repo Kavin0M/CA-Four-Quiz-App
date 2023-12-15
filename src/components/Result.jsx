@@ -1,9 +1,9 @@
-function Result(props) {
+function Result({score,textStyle,btnStyle,onSmash}) {
   return (
     <div className='result'>
-        <div className="title" style={props.textStyle}>Final Results</div>
-        <div className="score" style={props.textStyle}>{props.score} out of 5 correct - ({(props.score/5)*100}%)</div>
-        <div className="highlight-btn" style={props.btnStyle} onClick={props.onSmash}>Restart game</div>
+        <div className="title" style={textStyle}>Final Results</div>
+        <div className="score" style={textStyle}>{score} out of 5 correct - ({(score/5)*100}%)</div>
+        <div className="highlight-btn" style={btnStyle} onClick={onSmash}>Restart game</div>
     </div>
   )
 }
